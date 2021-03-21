@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MapsActivity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_distance"
+        android:text="0 м"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:text="3"
+        android:textSize="100dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/finish_workout"
+        android:layout_gravity="bottom"
+        android:textColor="@color/white"
+        android:background="@color/purple_200"
+        android:text="Закончить тренировку"
+        android:visibility="invisible"
+        android:layout_margin="16dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start_button"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/style_start_button"
+        android:text="Start"
+        android:layout_gravity="center"
+        android:layout_margin="16dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        map:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        android:id="@+id/modes_of_walk_nested"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/style_nested"
+        android:elevation="30dp"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/mode_fast_walk"
+                android:text="Быстрая ходьба"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:fontFamily="sans-serif-thin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/mode_walk"
+                android:text="Прогулка"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:fontFamily="sans-serif-thin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/mode_scandinavian_walk"
+                android:text="Скандинавская ходьба"
+                android:gravity="center_horizontal"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                android:fontFamily="sans-serif-thin"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

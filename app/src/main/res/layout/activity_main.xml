@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/style_background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="20dp"
+            app:contentPadding="16dp"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_walk"
+                    android:text="Ходьба"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-thin"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/tv_run"
+                    android:text="Бег"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-thin"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="20dp"
+            app:contentPadding="16dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Пройдено"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/all_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="41,06 км"
+                android:textColor="@color/black"
+                android:layout_gravity="right"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_date_workout"
+                    android:layout_marginTop="10dp"
+                    android:text="Дата"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-thin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_duration_workout"
+                    android:layout_marginTop="10dp"
+                    android:text="Время последней тренировки"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-thin"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_speed"
+                    android:layout_marginTop="10dp"
+                    android:text="Средняя скорость"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-thin"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</FrameLayout>
